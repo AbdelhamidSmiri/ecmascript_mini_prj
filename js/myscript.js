@@ -18,7 +18,7 @@ const dispalystudents = async function () {
 }
 
 const addStudent = function (event) {
-    event.preventDefault() // kt3ni annuler lia dakchi li kadir donc ghay annuler lia submit dyal form bhala dart return false
+    event.preventDefault() 
     const [nom, date, note] = document.querySelectorAll("#nom, #date, #note")
     console.log(nom.value, date, note)
     const student = new Student(nom.value, date.value, note.value)
@@ -26,7 +26,7 @@ const addStudent = function (event) {
 }
 const renderStudent = function () {
     const tbody = document.querySelector(".list_students")
-    dispalystudents().then(data => tbody.innerHTML = data.join(' ')) //had join bach thayad dik , li chaybatni 
+    dispalystudents().then(data => tbody.innerHTML = data.join(' ')) 
 
 }
 const init = function () {
